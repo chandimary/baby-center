@@ -1,0 +1,58 @@
+
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        link(rel="stylesheet", href="../style3.css")
+
+        title home page
+    body
+
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='/home') J  B  C
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        
+        .collapse.navbar-collapse(id='navbarSupportedContent')
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='/parentslogin') Home
+            li.nav-item
+              a.nav-link(href='/aboutus') About
+            li.nav-item
+              a.nav-link(href='/aboutus') search
+            li.nav-item
+              a.nav-link(href='/parentappointmentform') Make Bookings
+            li.nav-item
+              a.nav-link(href='/parentpayments') Make Payments
+          ul.navbar-nav.float-right
+            li.nav-item
+              a.nav-link(href='#') Sing-up
+            li.nav-item
+               a.nav-link(href='/parentslogin') Log-Out
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='false', aria-expanded='true') Accounts
+              .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                a.dropdown-item(href='/sitterlogin') logoin as a sitter
+                a.dropdown-item(href='/adminlogin') logoin as an admin
+                a.dropdown-item(href='/parentslogin') logoin as a parent
+                a.dropdown-item(href='/supervisorlogin') logoin as a supervisor
+      h1 J   B    C   WE HELP YOU CREATE NEW MEMORIES WITH YOUR FAMILY
+      
+      div.form-row
+        div.col.form-group
+          p dear parent your appointment request has been successfully recorded 
+          p and your childs ID is MO1234567
+      div.form-row
+        div.col.form-group
+          p The JBC Center is a Baby sitting Organisation business that helps 
+          p parents to take care of thier babies as they take chances in other activities
+          p the organisation has baby sitters and clubs that is headed by experienced 
+          p supervisors to enable safty and well
+          p being of our babies.
+
+
+
+

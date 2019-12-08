@@ -1,0 +1,15 @@
+body{
+    background-image: url(image01.jpg);
+    background-size: 2000px;
+    background-repeat: no-repeat;
+
+color: bisque;
+}
+
+form{
+    font-size: 15px;
+    background-color: #352f2e45;
+     padding: 10px 20px; 
+   
+}
+

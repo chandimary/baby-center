@@ -1,0 +1,92 @@
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        link(rel="stylesheet", href="../style.css" type='text/css')
+        title JBC 
+    body
+        div.row.justify-content-center
+            div.col-md-7
+                div.card-body
+                    header.card-header
+                        h4.card-title Make Appointment
+                    form(method="POST" action ="/parentappointmentform")
+                        div.form-row
+                            div.col.form-group
+                                label parents name 
+                                input.form-control(name="name" type="text" id="name")
+                            div.col.form-group
+                                label customer id 
+                                input.form-control(name="id" type="text" id="id")
+
+                        div.form-row
+                            div.col.form-group
+                                label Phone Number 
+                                input.form-control(name="number" type="text" id="number")
+                            div.col.form-group
+                                label email 
+                                input.form-control(name="email" type="text" id="email")
+
+                        div.form-row
+                            div.col.form-group
+                                p please take some time and provide information about the child (Children)
+                                label Name of the child 
+                                input.form-control(name="name" type="text" id="name")
+                          
+                        div.form-row
+                            div.col.form-group
+                                label.form-check.form-check-inline 
+                                input.form-check-input(type="radio" name=" healthproblem" value="health problem" id="healthproblem")
+                                spin.form-check-lable Yes
+                                label.form-check.form-check-inline
+                                input.form-check-input(type="radio" name="healthproblem" value="health problem" id="healthproblem")
+                                spin.form-check-lable No
+
+                        div.form-row
+                            div.col.form-group
+                                label If yes, please enter the condition
+                                input.form-control(name="describe" placeholder="describe the state")
+                            div.col.form-group
+                                label Area of stay
+                                input.form-control(name="area" type="text")
+
+                        div.form-row 
+                            div.col.form-group 
+                                label Children to be catered for
+                                select.form-control(name="number" id="number")
+                                    option(value="") select number
+                                    option(value="1") 1 
+                                    option(value="2") 2
+                                    option(value="3") 3
+                                    option(value="4") 4
+                                    option(value="5") 5
+                                    option(value="6") 6
+                                    option(value="7") 7
+                                    option(value="8") 8
+                                    option(value="9") 9
+                                    option(value="10") 10
+
+                            div.col.form-group 
+                                label Select a club section 
+                                select.form-control(name="club")
+                                    option(value="MORNING SECTION") MORNING SECTION
+                                    option(value="AFTERNOON SECTION") AFTERNOON SECTION
+                                    option(value="EVENING SECTION") EVENING SECTION
+                                    option(value="NIHGT SECTION") NIHGT SECTION
+                        div.form-row 
+                            div.col.form-group         
+                                p NOTE: Each sitter in a club is Available for two hours only
+                                P Night clubs are charged 12500/=
+                                p EACH CHILD WILL BE CHARGED 8500/=
+
+                        div.form-row           
+                            div.col.form-group         
+                                button.btn.btn-dark.btn-block subit-appointment 
+                                button.btn.btn-dark.btn-block Cancel
+                               
+//- summery
+//- this is the appoinment form its to be used by the clients who would like to book for a baby sitter at jbc
+
+

@@ -1,0 +1,51 @@
+
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        title JBC
+        //- beginning of the body
+    body
+        div.row.justify-content-center
+            div.col-md-6
+                div.card-body
+                    header.card-header
+                        h4.card-title baby to baby sit
+                    form(method="POST" action ="/sittersdashboard")
+                        div.form-row
+                            div.col.form-group
+                                label Name 
+                                input.form-control(name="name" type="text"  id="name")
+                            div.col.form-group
+                                label age of the child
+                                input.form-control(name="age" type="text"  id="age")
+
+                        div.form-row
+                            div.col.form-group
+                                label Club ordered
+                                input.form-control(name="Club" type="text"  id="club" )
+                    
+                            div.col.form-group
+                                label duration to baby sit
+                                input.form-control(name="duration" type="text"  id="duration")
+                        div.form-row
+                            div.col.form-group
+                                label Parents Number
+                                input.form-control(name="phone" type="text"  id="phone" )
+                            div.col.form-group
+                                label Parents Name
+                                input.form-control(name="name" type="text"  id="name" )
+
+
+                        div.form-row
+                            div.col.form-group         
+                                button.btn.btn-primary.btn-block click to add
+
+//- summery of the page and the contents in it
+//-this page contains contents that an adminstrator will base to add an employee to a club.
+
+
+
+

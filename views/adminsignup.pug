@@ -1,0 +1,152 @@
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="css/bootstrap.min.css")
+        link(rel="stylesheet", href="../style2.css" type='text/css')
+        title J   B   C 
+    body
+        div.row.justify-content-center
+            div.col-md-6
+                div.card-body
+                    header.card-header
+
+                          block content
+                            .main.container
+                              .row
+                                .col-md-12.col-md-offset-5
+                                  h1.display-4.m-b-2 Admin Sign Up
+
+                                  form(method='POST' action='/adminsignup')
+                                    div.form-group
+                                      label(for='name') Name:
+                                      input#name.form-control( type='text', placeholder='first and last' name='name')
+                                    div.form-group
+                                      label(for='email') Email:
+                                      input#email.form-control( type='email', placeholder='name@email.com' name='email')
+                                    div.form-group
+                                      label(for='Phone') Phone:
+                                      input#Phone.form-control( type='text', placeholder='Phone' name='Phone')
+                                    div.form-group
+                                      label(for='pw') Password:
+                                      input#pw.form-control(  type='password' name='password')
+                                    div.form-group
+                                      label(for='pw2') Confirm Password:
+                                      input#pw2.form-control(type='password' name='confirmPassword' )
+                                    button.btn.btn-primary(type='submit' style="width:100%" ) Sign up
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- doctype html
+//- html
+//-     head
+//-         link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+//-         link(rel="stylesheet", href="css/bootstrap.min.css")
+//-         link(rel="stylesheet", href="style.css")
+//-         title Signup form 
+//-     body 
+
+
+//-         div.container
+//-             div.row.justify-content-center
+//-                 div.col-md-6
+//-                     div.card-body
+//-                         header.card-header
+//-                             h4.card-title Signup form
+//-                     form(method="POST" action ="/login")
+//-                         div.form-row
+//-                             div.col.form-group
+//-                                 label User name
+//-                                 input.form-control( class="box" type="text" name="name" id="name" placeholder="Name"  required )
+                            
+//-                             div.col.form-group
+//-                                 label Email
+//-                                 input.form-control(class="box" type="email" name="email" id="email" placeholder="E-Mail " required )
+                    
+//-                         div.form-row
+//-                             div.col.form-group
+//-                                 label Password
+//-                                 input.form-control(class="box" type="password" name="password" id="password" placeholder="Password " required)
+
+//-                             div.col.form-group
+//-                                 label phone
+//-                                 input.form-control(class="box" type="text" name="phone" id="phone" placeholder="Phone Number " required )
+
+//-                         div.form-row            
+//-                             div.col.form-group
+//-                                 input(type="submit" id="submitDetails" name="submitDetails" value="Submit")
+
+
+//- summery
+//- this page is for signup,its to be used by the admin and the supervisors in jbc 
+

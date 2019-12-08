@@ -1,0 +1,48 @@
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        
+
+        title home page
+    body
+
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        a.navbar-brand(href='/home') J  B  C
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        
+        .collapse.navbar-collapse(id='navbarSupportedContent')
+          ul.navbar-nav.mr-auto
+            li.nav-item.active
+              a.nav-link(href='/home') Home
+            li.nav-item
+              a.nav-link(href='/aboutus') About
+            li.nav-item
+              a.nav-link(href='/aboutus') search
+            li.nav-item
+              a.nav-link(href='/parentappointmentform') Make Bookings
+            li.nav-item
+              a.nav-link(href='/#') Make Payments
+          ul.navbar-nav.float-right
+            li.nav-item
+              a.nav-link(href='/#') Sing-up
+            li.nav-item
+               a.nav-link(href='/supervisorlogin') Log-Out
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='false', aria-expanded='true') Accounts
+              .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                a.dropdown-item(href='/sitterlogin') logoin as a sitter
+                a.dropdown-item(href='/adminlogin') logoin as an admin
+                a.dropdown-item(href='/parentslogin') logoin as a parent
+                a.dropdown-item(href='/supervisorlogin') logoin as a supervisor
+      block content
+
+
+
+
+
+
+

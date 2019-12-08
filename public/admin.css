@@ -1,0 +1,27 @@
+
+body{
+    background-image: url(pic1.jpg);
+    background-size: 1500px;
+    background-repeat: no-repeat;
+
+
+}
+
+div.form-row{
+    font-size: 40px;
+    color: blue;
+    background-color: #352f2e45;
+     padding: 10px 20px; 
+   margin-top: 280px;
+   text-align: center;
+   height: 10%;
+}
+
+h2{
+    font-size: 52px;
+    color: bisque;
+}
+div{
+    
+    color: bisque;
+}
