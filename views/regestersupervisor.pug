@@ -1,0 +1,56 @@
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        link(rel="stylesheet", href="../style2.css" type='text/css')
+        title JBC 
+    body
+        div.row.justify-content-center
+            div.col-md-6
+                div.card-body
+                    header.card-header
+                        h4.card-title Registered supervisor
+                    form(method="POST" action ="/regesteredsitter")
+                        div.form-row
+                            div.col.form-group
+                                label Name
+                                input.form-control(name="name" type="text" id="name")
+                            div.col.form-group
+                                label Email 
+                                input.form-control(name="email" type="text" id="email")
+                        div.form-row
+                            div.col.form-group
+                                label Name of child to baby sit
+                                input.form-control(name="name" type="text" id="name")
+                            div.col.form-group 
+                                label club  
+                                select.form-control(name="club")
+                                    option(value="MORNING SECTION") MORNING SECTION
+                                    option(value="AFTERNOON SECTION") AFTERNOON SECTION
+                                    option(value="EVENING SECTION") EVENING SECTION
+                                    option(value="NIHGT SECTION") NIHGT SECTION
+                        div.form-row
+                            div.col.form-group
+                                label Sitter assined 
+                                input.form-control(name="supervisor" type="text" id="supervisor")
+                            div.col.form-group
+                                label Club assigned
+                                input.form-control(name="club" type="text" id="club")
+                        div.form-row            
+                            div.col.form-group         
+                                label create password
+                                input.form-control(type="password" name="password" id="password")
+                        div.form-row            
+                            div.col.form-group         
+                                button.btn.btn-primary.btn-block Regester 
+
+
+//- summery
+//- this page is a regestration form that will be used by the clieents who want to register
+
+
+
+
+

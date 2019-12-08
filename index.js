@@ -1,11 +1,14 @@
 
 const express = require("express");
+
 // //requiring body passer to enable the js to access the elementes in the body from our pug files
 // const bodyParser = require("body-parser")
 const bodyParser = require("body-parser");
 
+// ... call to require('express') ...
+const {check, validationResult} = require('express-validator/check');
+
 const path = require('path');//path enables
-//requiring moose
 // const mongoose = require("mongoose");
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/gfg');
@@ -79,10 +82,29 @@ app.post('/adminlogin', (req, res) => {
 
 });
 
-app.get('/parentappointmentform', (req, res) => {
+app.get('/users', (req, res) => {
+    [check('name').not().isEmpty().withMessage('Name must have more than 5 characters'),
+    check('id', 'id should be a number').not().isEmpty(),
+    check('number', 'Choose a number').optional(),
+    check('area', 'Choose a area').optional(),
+    check('club', 'Choose a club').optional(),
+    check('healthproblem', 'enter the health problem associted').optional(),
+    check('email', 'Your email is not valid').not().isEmpty(),
+    
+    check('phonenumber', 'Your number must be at least 5 characters').not().isEmpty(),],
+
+    function (req, res) {
+        const errors = validationResult(req);
+        console.log(req.body);
+    
+        if (!errors.isEmpty()) {
+          return res.status(422).jsonp(errors.array());
+        } else {
+          res.send({});
+        }
     res.render("parentappointmentform")
 
-});
+}});
 app.post('/parentappointmentform', (req, res) => {
     res.render("regesteredsitter")
 

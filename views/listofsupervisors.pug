@@ -1,0 +1,41 @@
+
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        title Lists
+    body
+        
+         header.card-header
+            h4.card-tittle List Of registered supervisors
+                form(method="POST" action ="/paymentlist")
+                  
+                    div.form-row
+                        div.col-12.form-group 
+                            a.btn.btn-primary( href="/paymentlist" type='submit' style="width:100%") payment-list 
+                            button.btn.btn-primary(type='submit' style="width:100%") Next 
+                table.table
+                    thead.thead-dark
+                        tr 
+                            th name
+                            th email
+                            th Duties
+                            th Child to baby-sit
+                            th club
+                            th password
+                    tbody   
+                        //- each user in users
+                        //-     tr
+                        //-         td #{user.firstname}
+                        //-         td #{user.lastname}
+                        //-         td #{user.duties}
+                                //- td #{user.Child to baby-sit}
+                                    td #{club}
+                                    td #{password}
+
+
+
+
+

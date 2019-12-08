@@ -1,0 +1,45 @@
+
+
+
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="../css/bootstrap.min.css")
+        title Lists
+    body
+        
+         header.card-header
+            h4.card-tittle List Of appointment
+                form(method="POST" action ="/paymentlist")
+                  
+                    div.form-row
+                        div.col-12.form-group 
+                            a.btn.btn-primary( href="/paymentlist" type='submit' style="width:100%") payment-list 
+                            button.btn.btn-primary(type='submit' style="width:100%") Next 
+                table.table
+                    thead.thead-dark
+                        tr 
+                            th name
+                            th id
+                            th phone
+                            th email
+                            th name of the child
+                            th club 
+                            
+                    tbody   
+                        //- each user in users
+                        //-     tr
+                        //-         td #{user.name}
+                        //-         td #{user.id}
+                        //-         td #{user.phone}
+                                //- td #{user.name of the child}
+                                    td #{club }
+                                    
+
+
+
+
+
+
+

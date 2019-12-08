@@ -7,12 +7,14 @@ html
         link(rel="stylesheet", href="../style.css" type='text/css')
         title JBC 
     body
+        .alert(class="alert-danger", role="alert", id="error-group", style="display: none")
+            ul(id="errors")
         div.row.justify-content-center
             div.col-md-7
                 div.card-body
                     header.card-header
                         h4.card-title Make Appointment
-                    form(method="POST" action ="/parentappointmentform")
+                    form(method="POST" action ="/users")
                         div.form-row
                             div.col.form-group
                                 label parents name 
@@ -24,7 +26,7 @@ html
                         div.form-row
                             div.col.form-group
                                 label Phone Number 
-                                input.form-control(name="number" type="text" id="number")
+                                input.form-control(name="phonenumber" type="text" id="phonenumber")
                             div.col.form-group
                                 label email 
                                 input.form-control(name="email" type="text" id="email")
@@ -33,7 +35,7 @@ html
                             div.col.form-group
                                 p please take some time and provide information about the child (Children)
                                 label Name of the child 
-                                input.form-control(name="name" type="text" id="name")
+                                input.form-control(name="childname" type="text" id="childname")
                           
                         div.form-row
                             div.col.form-group
@@ -47,10 +49,10 @@ html
                         div.form-row
                             div.col.form-group
                                 label If yes, please enter the condition
-                                input.form-control(name="describe" placeholder="describe the state")
+                                input.form-control(name="describe" id="describe" placeholder="describe the state")
                             div.col.form-group
                                 label Area of stay
-                                input.form-control(name="area" type="text")
+                                input.form-control(name="area" id="area" type="text")
 
                         div.form-row 
                             div.col.form-group 
@@ -69,8 +71,8 @@ html
                                     option(value="10") 10
 
                             div.col.form-group 
-                                label Select a club section 
-                                select.form-control(name="club")
+                                label club section 
+                                select.form-control(name="club" id="club")
                                     option(value="MORNING SECTION") MORNING SECTION
                                     option(value="AFTERNOON SECTION") AFTERNOON SECTION
                                     option(value="EVENING SECTION") EVENING SECTION
@@ -83,7 +85,7 @@ html
 
                         div.form-row           
                             div.col.form-group         
-                                button.btn.btn-dark.btn-block subit-appointment 
+                                button.form-control(type="button", class="btn btn-primary", id="signup-btn") Submit 
                                 button.btn.btn-dark.btn-block Cancel
                                
 //- summery
