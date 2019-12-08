@@ -5,6 +5,8 @@ const express = require("express");
 // const bodyParser = require("body-parser")
 const bodyParser = require("body-parser");
 
+//requiring the route files
+const appointment = require('./routes/appointmentRoute')
 // ... call to require('express') ...
 const {check, validationResult} = require('express-validator/check');
 
@@ -30,6 +32,8 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+//
+app.use('/appointments' , appointment)
 
 
 app.get('/', (req, res) => {
@@ -65,78 +69,12 @@ app.get('/aboutus', (req, res) => {
     res.render("aboutus")
 });
 
-app.get('/adminsignup', (req, res) => {
-    res.render("adminsignup")
+app.get('/login', (req, res) => {
+    res.render("login")
 });
 
-app.post('/adminsignup', (req, res) => {
-    res.render("adminlogin")
-});
-
-app.get('/adminlogin', (req, res) => {
-    res.render("adminlogin")
-});
-
-app.post('/adminlogin', (req, res) => {
-    res.render("parentappointmentform")
-
-});
-
-app.get('/users', (req, res) => {
-    [check('name').not().isEmpty().withMessage('Name must have more than 5 characters'),
-    check('id', 'id should be a number').not().isEmpty(),
-    check('number', 'Choose a number').optional(),
-    check('area', 'Choose a area').optional(),
-    check('club', 'Choose a club').optional(),
-    check('healthproblem', 'enter the health problem associted').optional(),
-    check('email', 'Your email is not valid').not().isEmpty(),
-    
-    check('phonenumber', 'Your number must be at least 5 characters').not().isEmpty(),],
-
-    function (req, res) {
-        const errors = validationResult(req);
-        console.log(req.body);
-    
-        if (!errors.isEmpty()) {
-          return res.status(422).jsonp(errors.array());
-        } else {
-          res.send({});
-        }
-    res.render("parentappointmentform")
-
-}});
-app.post('/parentappointmentform', (req, res) => {
-    res.render("regesteredsitter")
-
-});
-
-app.get('/regesteredsitter', (req, res) => {
-    res.render("regesteredsitter")
-
-});
-
-app.post('/regesteredsitter', (req, res) => {
-    res.render("babytosit")
-
-});
-
-app.get('/babytosit', (req, res) => {
-    res.render("babytosit")
-
-});
-
-app.post('/babytosit', (req, res) => {
-    res.render("parentpayments")
-
-});
-app.get('/parentpayments', (req, res) => {
-    res.render("parentpayments")
-
-});
-
-app.post('/parentpayments', (req, res) => {
-    res.render("listofregisteredsitters")
-
+app.post('/signup', (req, res) => {
+    res.render("signup")
 });
 
 
@@ -145,125 +83,38 @@ app.get('/listofregistersitters', (req, res) => {
 
 });
 
-app.post('/listofregistersitters', (req, res) => {
-    res.render("paymentlist")
-
-});
-
-
-app.get('/paymentlist', (req, res) => {
-    res.render("paymentlist")
-
-});
-
-app.post('/paymentlist', (req, res) => {
-    res.render("adminsdashboard")
-
-});
 
 app.get('/adminsdashboard', (req, res) => {
     res.render("adminsdashboard")
 
 });
 
-//how to connect files
+app.get('/babies', (req, res) => {
+    res.render("babies")
 
 
-
-//    app.get('/listofregistersitters',(req,res)=>{
-//     res.render("paymentlist")
-
-//     });
-
-
-//sitters posts
-app.get('/sitterlogin', (req, res) => {
-    res.render("sitterlogin")
-
-});
-
-app.post('/sitterlogin', (req, res) => {
-    res.render("sitbaby")
-
-});
-
-app.get('/sitbaby', (req, res) => {
+app.get('/sittersdashboard', (req, res) => {
     res.render("sittersdashboard")
 
 });
-app.post('/sitbaby', (req, res) => {
-    res.render("sittersdashboard")
-});
 
-app.get('/sitterssdashboard', (req, res) => {
-    res.render("sittersdashboard")
 
-});
-//end of sitters posts
-
-//parents posts
-app.get('/parentslogin', (req, res) => {
-    res.render("parentslogin")
-
-});
-app.post('/parentslogin', (req, res) => {
-    res.render("/parentappointmentform")
+app.get('/listofappointment', (req, res) => {
+    res.render("listofappointment")
 
 });
 
-app.get('/parentsdashboard', (req, res) => {
-    res.render("parentsdashboard")
+app.get('/listofpayments', (req, res) => {
+    res.render("listofpayments")
 
 });
 
 
-//end of parent posts
-
-
-
-app.get('/supervisorlogin', (req, res) => {
-    res.render("supervisorlogin")
-
-});
-app.post('/supervisorlogin', (req, res) => {
-    res.render("supervisors")
-
-});
-
-
-
-
-
-
-
-
-
-app.get('/aboutus', (req, res) => {
-    res.render("aboutus")
-
-});
-
-app.get('/payment', (req, res) => {
-    res.render("paymentlist")
-
-});
-
-app.get('/home', (req, res) => {
-    res.render("home")
-
-});
 
 app.get('/register3', (req, res) => {
     res.render("layout")
 
 });
-
-
-
-
-
-
-
 
 
 
@@ -277,4 +128,4 @@ app.listen(3000, () => {
     console.log("server listening at port 3000");
 });
 
-
+})

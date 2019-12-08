@@ -17,28 +17,28 @@ html
         .collapse.navbar-collapse(id='navbarSupportedContent')
           ul.navbar-nav.mr-auto
             li.nav-item.active
-              a.nav-link(href='/home') Home
+              a.nav-link(href='/index') Home
             li.nav-item
               a.nav-link(href='/aboutus') About
             li.nav-item
               a.nav-link(href='/aboutus') search
             li.nav-item
-              a.nav-link(href='/parentappointmentform') Make Bookings
+              a.nav-link(href='/appointments') Make Bookings
             li.nav-item
-              a.nav-link(href='/#') Make Payments
+              a.nav-link(href='/listofappointment') View lists of bookings
           ul.navbar-nav.float-right
             li.nav-item
-              a.nav-link(href='/#') Sing-up
+              a.nav-link(href='/babies') View Bookings
             li.nav-item
-               a.nav-link(href='/supervisorlogin') Log-Out
+               a.nav-link(href='/login') Log-Out
             li.nav-item.dropdown
               a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='false', aria-expanded='true') Accounts
               .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                a.dropdown-item(href='/sitterlogin') logoin as a sitter
-                a.dropdown-item(href='/adminlogin') logoin as an admin
-                a.dropdown-item(href='/parentslogin') logoin as a parent
-                a.dropdown-item(href='/supervisorlogin') logoin as a supervisor
-      block content
+                a.dropdown-item(href='/#') logoin as a sitter
+                a.dropdown-item(href='/#') logoin as an admin
+                a.dropdown-item(href='/#') logoin as a parent
+                a.dropdown-item(href='/#') logoin as a supervisor
+     form(method="POST" action ="/supervisorsdashboard")
 
 
 

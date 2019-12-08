@@ -9,7 +9,7 @@ html
         
          header.card-header
             h4.card-tittle List Of registered sitters
-                form(method="POST" action ="/paymentlist")
+                form(method="POST" action ="/listofregisteredsitters")
                   
                     div.form-row
                         div.col-12.form-group 
@@ -18,17 +18,17 @@ html
                 table.table
                     thead.thead-dark
                         tr 
-                            th Firstname
-                            th Lastname
+                            th name
+                            th club
                             th Duties
-                            th Child to baby-sit
+                            th id
                     tbody   
                         //- each user in users
                         //-     tr
-                        //-         td #{user.firstname}
-                        //-         td #{user.lastname}
+                        //-         td #{name}
+                        //-         td #{user.club}
                         //-         td #{user.duties}
-                                //- td #{user.Child to baby-sit}
+                                //- td #{user.id}
 
 
 

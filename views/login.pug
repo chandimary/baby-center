@@ -1,4 +1,5 @@
 
+
 doctype html
 html
     head
@@ -15,8 +16,8 @@ html
                         .main.container
                             .row
                                 .col-md-12.col-md-offset-12
-                                    h1.display-4.m-b-2 J  B C supervisor's log-in
-                                    form(method='POST' action='/supervisorlogin')
+                                    h1.display-4.m-b-2  welcome to the admin login
+                                    form(method='POST' action='/login')
                                         div.form-row
                                             div.col-6.form-group
                                                 label(for='email') Email
@@ -28,3 +29,5 @@ html
                                         div.form-row
                                             div.col-12.form-group  
                                                 button.btn.btn-primary(type='submit' style="width:100%") Log in 
+        script
+        console.log("test")

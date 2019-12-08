@@ -1,5 +1,6 @@
 
 
+
 doctype html
 html
     head
@@ -9,8 +10,8 @@ html
     body
         
          header.card-header
-            h4.card-tittle List Of registered supervisors
-                form(method="POST" action ="/listofsupervisors")
+            h4.card-tittle List Of payments
+                form(method="POST" action ="/listofpayments")
                   
                     div.form-row
                         div.col-12.form-group 
@@ -20,20 +21,25 @@ html
                     thead.thead-dark
                         tr 
                             th name
-                            th email
-                            th Duties
-                            th Child to baby-sit
-                            th club
-                            th password
+                            th id
+                            th amount
+                            th duration
+                            th balance
+                            th club 
+                            
                     tbody   
                         //- each user in users
                         //-     tr
-                        //-         td #{user.firstname}
-                        //-         td #{user.lastname}
-                        //-         td #{user.duties}
-                                //- td #{user.Child to baby-sit}
-                                    td #{club}
-                                    td #{password}
+                        //-         td #{user.name}
+                        //-         td #{user.id}
+                        //-         td #{user. amount}
+                                //- td #{user.duration}
+                                    td #{user.balance }
+                                    td #{user.club }
+
+                                    
+
+
 
 
 

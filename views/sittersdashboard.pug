@@ -9,35 +9,35 @@ html
     body
 
       nav.navbar.navbar-expand-lg.navbar-light.bg-light
-        a.navbar-brand(href='/home') J  B  C
+        a.navbar-brand(href='/aboutus') J  B  C
         button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
           span.navbar-toggler-icon
         
         .collapse.navbar-collapse(id='navbarSupportedContent')
           ul.navbar-nav.mr-auto
             li.nav-item.active
-              a.nav-link(href='#') Home
+              a.nav-link(href='index') Home
             li.nav-item
-              a.nav-link(href='/aboutus') About
+              a.nav-link(href='/aboutus') About-Us
             li.nav-item
               a.nav-link(href='/aboutus') search
             li.nav-item
-              a.nav-link(href='/babytosit') View Bookings
+              a.nav-link(href='/babies') View Bookings
             li.nav-item
               a.nav-link(href='#') Make Payments
           ul.navbar-nav.float-right
             li.nav-item
               a.nav-link(href='#') Sing-up
             li.nav-item
-               a.nav-link(href='/sitterlogin') Log-Out
+               a.nav-link(href='/login') Log-Out
             li.nav-item.dropdown
               a.nav-link.dropdown-toggle(id='navbarDropdownMenuLink', data-toggle='dropdown', aria-haspopup='false', aria-expanded='true') Accounts
               .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                a.dropdown-item(href='/sitterlogin') logoin as a sitter
-                a.dropdown-item(href='/adminlogin') logoin as an admin
-                a.dropdown-item(href='/parentslogin') logoin as a parent
-                a.dropdown-item(href='/supervisorlogin') logoin as a supervisor
-      
+                a.dropdown-item(href='/#') logoin as a sitter
+                a.dropdown-item(href='/#') logoin as an admin
+                a.dropdown-item(href='/#') logoin as a parent
+                a.dropdown-item(href='/#') logoin as a supervisor
+      form(method="POST" action ="/sittersdashboard")
 
 
 
