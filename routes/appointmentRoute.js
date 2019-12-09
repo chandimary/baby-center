@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
 });
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("");
 });
 
 module.exports = router;

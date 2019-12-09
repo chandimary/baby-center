@@ -2,21 +2,46 @@
 
 const mongoose = require("mongoose");
 
+//schema definition
+var nameSchema = new mongoose.Schema({
+    name:{
+        type:String,
+    required:'Please Enter name'},
+    email:String,
+    club:String,
+    supervisor:String,
+});
+
+
 //schema definition for the validation of the login form
 var registerSchema = new mongoose.Schema({
-    email:{
+    name:{
         type:String,
     required:'Please Enter username'},
 
-    password:{ type:String,
-     required:   "Login Failed"}
+
+    email:{ 
+        type:String,
+     required:   "enter email"},
+
+     club:{
+type:String,
+required: "assign club"
+     },
+
+     supervisor:{
+        type:String,
+        required: "name of the supervisor"
+             },
 });
+
 //hasging the password before saving it to data base
 registerSchema.pre('save',function(next){
     this.password = bcrypt.hashSync(this.password, 10);
     next();
     console.log(this.password);
-});
+})
+
 //authenticate input against database
 registerSchema.statics.authenticate = async function (username, password) {
     const user = await this.findOne({ username: username })
@@ -33,14 +58,10 @@ registerSchema.statics.authenticate = async function (username, password) {
 
 
 
-
-
-
-
-
-
 //code for exporting module
 module.exports = mongoose.model("User", nameSchema);
+
+
 
 
 

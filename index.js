@@ -4,11 +4,13 @@ const express = require("express");
 // //requiring body passer to enable the js to access the elementes in the body from our pug files
 // const bodyParser = require("body-parser")
 const bodyParser = require("body-parser");
+const login = require("./routes/loginRoute.js");
+const apointmentlist = require("./routes/appointmentRoute.js")
 
 //requiring the route files
 const appointment = require('./routes/appointmentRoute')
 // ... call to require('express') ...
-const {check, validationResult} = require('express-validator/check');
+const { check, validationResult } = require('express-validator/check');
 
 const path = require('path');//path enables
 // const mongoose = require("mongoose");
@@ -32,8 +34,11 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-//
-app.use('/appointments' , appointment)
+
+//importing schema files
+// app.use('/appointments', appointment)
+// app.use('/login', login)
+// app.use('/apointmentlist', apointmentlist)
 
 
 app.get('/', (req, res) => {
@@ -57,13 +62,12 @@ app.post('/signup', function (req, res) {
 
         // TODO: Redirect to the Login Page
 
-        res.redirect('adminlogin');
+        res.redirect('login');
 
     });
 
     res.redirect('signup');
-})
-
+});
 
 app.get('/aboutus', (req, res) => {
     res.render("aboutus")
@@ -73,7 +77,8 @@ app.get('/login', (req, res) => {
     res.render("login")
 });
 
-app.post('/signup', (req, res) => {
+
+app.get('/signup', (req, res) => {
     res.render("signup")
 });
 
@@ -91,7 +96,7 @@ app.get('/adminsdashboard', (req, res) => {
 
 app.get('/babies', (req, res) => {
     res.render("babies")
-
+});
 
 app.get('/sittersdashboard', (req, res) => {
     res.render("sittersdashboard")
@@ -109,7 +114,9 @@ app.get('/listofpayments', (req, res) => {
 
 });
 
-
+app.get('/appointments', (req, res) => {
+    res.render("appointments")
+})
 
 app.get('/register3', (req, res) => {
     res.render("layout")
@@ -117,15 +124,13 @@ app.get('/register3', (req, res) => {
 });
 
 
-
 app.get('/supervisorsdashboard', (req, res) => {
     res.render("supervisorsdashboard")
 
 });
 
-
 app.listen(3000, () => {
     console.log("server listening at port 3000");
 });
 
-})
+
